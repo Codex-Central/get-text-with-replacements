@@ -1,11 +1,18 @@
 {
   "name": "@codexcentral/get-text-with-replacements",
   "version": "1.0.0",
-  "description": "Function to allow....",
+  "description": "Function to allow you to get a text with replacements from a text with placeholders",
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "keywords": ["typescript"],
+  "keywords": [
+    "typescript",
+    "string",
+    "replace",
+    "text",
+    "javascript",
+    "node"
+  ],
   "author": "Roberto Silva Zuñiga <c.roberto.u@gmail.com>",
   "repository": {
     "type": "git",
