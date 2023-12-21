@@ -1,37 +1,68 @@
-# <name_of_package>
-Specify the description of your project here...
+# get-text-with-replacements
+This library aims to retrieve a specific text message from a data object and replace placeholders within the text with provided values. 
+
+It allows for dynamic text generation by substituting placeholders in the original text with corresponding replacement values, providing flexibility in generating customized messages or content.
 
 
 ## Installation
 
-> `npm install @codexcentral/<name_of_package>`
+> `npm install @codexcentral/get-text-with-replacements`
 
 ## Usage
-### 1. Importing...
+### 1. Import the function
 
 ```javascript
-import { MyFunction } from '@codexcentral/<name_of_package>';
+import { getText } from '@codexcentral/get-text-with-replacements';
 ```
 
-### 2. Call the functions...
+
+### 2. Create the data object
+Define between `{ }` the keywords that will be replaced
+
+```javascript
+const data = {
+  "hello_world": "Hello World {name}!"
+};
+```
 
 
-### Attributes...
+### 3. Call the function
+
+```javascript
+const text = getText({
+  data,
+  key: "hello_world",
+  replacements: { name: "Roberto" },
+  notFoundText: "not_found"
+});
+```
+
+#### Result
+
+```javascript
+console.log(text); 
+// Hello World Roberto!
+```
+
+
+### Attributes
 
 | Attribute | Type | Mandatory |
 | ------ | ------ | ------ |
-|  attribute1 | `string` | true |
-|  attribute2 | `number` | true (100 to 599) |
-|  attribute3 | `array` | false |
-|  attribute4 | `number` | false (default: 1000 - in milliseconds) |
+|  data | `object` | true |
+|  key | `string` | true |
+|  replacements | `object` | false |
+|  notFoundText | `string` | false (default: `<key__not_found>`) |
 
-#### Example of Attributes
+#### Example of attributes
 ```json
 {
-  "attribute1": "/test",
-  "attribute2": 200,
-  "attribute3": [],
-  "attribute4": 5000
+  "data": {
+    "hello_world": "Hello World {name}!"
+  },
+  "key": "hello_world",
+  "replacements": { "name": "Roberto" },
+  "notFoundText": "not_found"
 }
 ```
 
