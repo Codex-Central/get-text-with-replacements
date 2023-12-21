@@ -66,5 +66,28 @@ console.log(text);
 }
 ```
 
+## Wrapper function as a Helper (optional)
+### 1. Import the function
+
+```javascript
+import { getText, TGetText } from '@codexcentral/get-text-with-replacements';
+```
+
+### 2. Create the Helper function
+
+```javascript
+const getTextReplaced = <T extends Record<string, any>>({
+  data,
+  key,
+  replacements,
+}: TGetText<T>) => {
+  return getText({
+    data,
+    key,
+    replacements,
+  });
+};
+```
+
 # Credits
 These code was written by [Roberto Silva Z.](https://www.linkedin.com/in/robertosilvazuniga/)
