@@ -1,5 +1,5 @@
 {
-  "name": "@codexcentral/<name_of_package>",
+  "name": "@codexcentral/get-text-with-replacements",
   "version": "1.0.0",
   "description": "Function to allow....",
   "license": "Apache-2.0",
@@ -9,12 +9,12 @@
   "author": "Roberto Silva Zuñiga <c.roberto.u@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Codex-Central/<name_of_package>.git"
+    "url": "git+https://github.com/Codex-Central/get-text-with-replacements.git"
   },
   "bugs": {
-    "url": "https://github.com/Codex-Central/<name_of_package>/issues"
+    "url": "https://github.com/Codex-Central/get-text-with-replacements/issues"
   },
-  "homepage": "https://github.com/Codex-Central/<name_of_package>#readme",
+  "homepage": "https://github.com/Codex-Central/get-text-with-replacements#readme",
   "scripts": {
     "build": "rm -rf dist/ && tsc"
   },
